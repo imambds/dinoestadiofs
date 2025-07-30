@@ -1,0 +1,998 @@
+<!doctype html>
+<html lang="en">
+
+<!-- Opening Loader -->
+<div id="loader" class="loader">
+  <div class="loader-content">
+    <!-- Ganti src logo sesuai path kamu -->
+    <img src="./assets/images/favicon/logo_black_only.png" alt="Dinoestadio Logo" />
+  </div>
+</div>
+
+<style>
+  .loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.6s ease, visibility 0.6s;
+  }
+
+  .loader-content img {
+    width: 140px;
+    animation: fadeInScale 1s ease;
+  }
+
+  @keyframes fadeInScale {
+    0% {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  .loader.fade-out {
+    opacity: 0;
+    visibility: hidden;
+  }
+</style>
+
+<script>
+  window.addEventListener("load", () => {
+    const loader = document.getElementById("loader");
+    setTimeout(() => {
+      loader.classList.add("fade-out");
+    }, 1200);
+  });
+</script>
+
+
+
+<!-- Head -->
+<head>
+  <!-- Page Meta Tags-->
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="keywords" content="">
+
+  <!-- Custom Google Fonts-->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600&family=Roboto:wght@300;400;700&display=auto"
+    rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="logo_black_only" sizes="180x180" href="./assets/images/favicon/logo_black_only.png">
+  <link rel="icon" type="images/png" sizes="32x32" href="./assets/images/favicon/logo_black_only.png">
+  <link rel="icon" type="images/png" sizes="16x16" href="./assets/images/favicon/logo_black_only.png">
+  <link rel="mask-icon" href="./assets/images/favicon/logo_black_only.png" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Vendor CSS -->
+  <link rel="stylesheet" href="./assets/css/libs.bundle.css" />
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="./assets/css/theme.bundle.css" />
+
+  <!-- Fix for custom scrollbar if JS is disabled-->
+  <noscript>
+    <style>
+      /**
+          * Reinstate scrolling for non-JS clients
+          */
+      .simplebar-content-wrapper {
+        overflow: auto;
+      }
+    </style>
+  </noscript>
+
+  <!-- Page Title -->
+  <title>Dinoestadiofs
+  </title>
+
+</head>
+<body class="">
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white flex-column border-0">
+    <div class="container-fluid">
+      <div class="w-100">
+        <div class="d-flex justify-content-between align-items-center flex-wrap">
+
+          <!-- Logo -->
+          <a class="navbar-brand fw-bold fs-3 m-0 p-0 flex-shrink-0 order-0" href="./index.html">
+            <div class="d-flex align-items-center">
+              <img src="./assets/images/favicon/logo_black_only.png" alt="Logo" class="img-fluid" style="height: 120px;">
+            </div>
+          </a>
+          <!-- / Logo -->
+
+          <!-- Navbar Icons -->
+          <ul class="list-unstyled mb-0 d-flex align-items-center order-1 order-lg-2 nav-sidelinks">
+
+            <!-- Mobile Nav Toggler -->
+            <li class="d-lg-none">
+              <span class="nav-link text-body d-flex align-items-center cursor-pointer" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="ri-menu-line ri-lg me-1"></i> Menu
+              </span>
+            </li>
+            <!-- /Mobile Nav Toggler -->
+
+            <!-- Navbar Search -->
+            <li class="d-none d-sm-block">
+              <span class="nav-link text-body search-trigger cursor-pointer">Search</span>
+              <div class="navbar-search d-none">
+                <div class="input-group mb-3 h-100">
+                  <span class="input-group-text px-4 bg-transparent border-0">
+                    <i class="ri-search-line ri-lg"></i>
+                  </span>
+                  <input type="text" class="form-control text-body bg-transparent border-0" placeholder="Enter your search terms...">
+                  <span class="input-group-text px-4 cursor-pointer disable-child-pointer close-search bg-transparent border-0">
+                    <i class="ri-close-circle-line ri-lg"></i>
+                  </span>
+                </div>
+              </div>
+              <div class="search-overlay"></div>
+            </li>
+            <!-- /Navbar Search -->
+
+            <!-- Navbar Login 
+            <li class="ms-1 d-none d-lg-inline-block">
+              <a class="nav-link text-body" href="./login.html">Account</a>
+            </li>
+            Navbar Login -->
+
+            
+
+          <!-- Main Navigation -->
+          <div class="flex-shrink-0 collapse navbar-collapse navbar-collapse-light w-auto flex-grow-1 order-2 order-lg-1" id="navbarNavDropdown">
+
+            <!-- Menu -->
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+              <li class="nav-item dropdown dropdown position-static">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">World of football</a>
+                <div class="dropdown-menu dropdown-megamenu">
+                  <div class="container-fluid">
+                    <div class="row g-0 g-lg-3">
+                      <div class="col col-lg-8 py-lg-5">
+                        <div class="row py-3 py-lg-0 flex-wrap gx-4 gy-6">
+
+                          <div class="col">
+                            <h6 class="dropdown-heading">Jersey & Kids</h6>
+                            <ul class="list-unstyled">
+                              <li class="dropdown-list-item"><a class="dropdown-item">Manchester United</a></li>
+                              <li class="dropdown-list-item"><a class="dropdown-item">Liverpool</a></li>
+                              <li class="dropdown-list-item"><a class="dropdown-item">Chelsea</a></li>
+                              <li class="dropdown-list-item"><a class="dropdown-item">Newcastle United</a></li>
+                              <li class="dropdown-list-item"><a class="dropdown-item">Manchester City</a></li>
+                              <li class="dropdown-list-item"><a class="dropdown-item dropdown-link-all" href="./category.html">View All</a></li>
+                            </ul>
+                          </div>
+
+                          <div class="d-none d-xxl-block col">
+                            <h6 class="dropdown-heading">Jacket</h6>
+                            <ul class="list-unstyled">
+                              <li class="dropdown-list-item"><a class="dropdown-item">AC Milan</a></li>
+                              <li class="dropdown-list-item"><a class="dropdown-item">Paris Saint Germany</a></li>
+                              <li class="dropdown-list-item"><a class="dropdown-item">Real Madrid</a></li>
+                              <li class="dropdown-list-item"><a class="dropdown-item">Brazil</a></li>
+                              <li class="dropdown-list-item"><a class="dropdown-item">England</a></li>
+                              <li class="dropdown-list-item"><a class="dropdown-item dropdown-link-all" href="./category.html">View All</a></li>
+                            </ul>
+                          </div>
+
+                          <div class="d-none d-xxl-block col">
+                            <h6 class="dropdown-heading">Other League</h6>
+                            <ul class="list-unstyled">
+                              <li class="dropdown-list-item"><a class="dropdown-item">Rest Of World</a></li>
+                              <li class="dropdown-list-item"><a class="dropdown-item dropdown-link-all" href="./category.html">View All</a></li>
+                            </ul>
+                          </div>
+
+                          <div class="d-none d-xxl-block col">
+                            <h6 class="dropdown-heading">National Teams</h6>
+                            <ul class="list-unstyled">
+                              <li class="dropdown-list-item"><a class="dropdown-item">International</a></li>
+                              <li class="dropdown-list-item"><a class="dropdown-item dropdown-link-all" href="./category.html">View All</a></li>
+                            </ul>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="nav-item dropdown dropdown position-static">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Accessories</a>
+                <div class="dropdown-menu dropdown-megamenu">
+                  <div class="container-fluid">
+                    <div class="row g-0 g-lg-3">
+                      <div class="col col-lg-8 py-lg-5">
+                        <div class="row py-3 py-lg-0 flex-wrap gx-4 gy-6">
+                          <div class="col">
+                            <h6 class="dropdown-heading">Lifestyle Items</h6>
+                            <ul class="list-unstyled">
+                              <li class="dropdown-list-item"><a class="dropdown-item">Caps & Hats</a></li>
+                              <li class="dropdown-list-item"><a class="dropdown-item">Bags & Backpacks</a></li>
+                              <li class="dropdown-list-item"><a class="dropdown-item">Scarves</a></li>
+                              <li class="dropdown-list-item"><a class="dropdown-item dropdown-link-all" href="./category.html">View All</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+            </ul>
+            <!-- / Menu -->
+          </div>
+          <!-- / Main Navigation -->
+
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- / Navbar -->
+
+</body>
+    <!-- Main Section-->
+    <section class="mt-0 overflow-hidden ">
+        <!-- Page Content Goes Here -->
+
+        <!-- / Top banner -->
+        <section class="vh-75 vh-lg-60 container-fluid rounded overflow-hidden" data-aos="fade-in">
+            <!-- Swiper Info -->
+            <div class="swiper-container overflow-hidden rounded h-100 bg-light" data-swiper data-options='{
+              "spaceBetween": 0,
+              "slidesPerView": 1,
+              "effect": "fade",
+              "speed": 1000,
+              "loop": true,
+              "parallax": true,
+              "observer": true,
+              "observeParents": true,
+              "lazy": {
+                "loadPrevNext": true
+                },
+                "autoplay": {
+                  "delay": 5000,
+                  "disableOnInteraction": false
+              },
+              "pagination": {
+                "el": ".swiper-pagination",
+                "clickable": true
+                }
+              }'>
+              <div class="swiper-wrapper">
+            
+                <!-- Slide-->
+                <div class="swiper-slide position-relative h-100 w-100">
+                  <div class="w-100 h-100 overflow-hidden position-absolute z-index-1 top-0 start-0 end-0 bottom-0">
+                    <div class="w-100 h-100 bg-img-cover bg-pos-center-center overflow-hidden" data-swiper-parallax="-100"
+                      style=" will-change: transform; background-image: url(./assets/images/banners/des.png)">
+                    </div>
+                  </div>
+                  <div
+                    class="container position-relative z-index-10 d-flex h-100 align-items-start flex-column justify-content-center">
+                    <p class="title-small text-white opacity-75 mb-0" data-swiper-parallax="-100">Everything You Need</p>
+                    <h2 class="display-3 tracking-wide fw-bold text-uppercase tracking-wide text-white" data-swiper-parallax="100">
+                      <span class="text-outline-light">Vintage</span> Jersey</h2>
+                    <div data-swiper-parallax-y="-25">
+                      <a href="./category.html" class="btn btn-psuedo text-white" role="button">Shop New Arrivals</a>
+                    </div>
+                  </div>
+                </div>
+                <!-- /Slide-->
+            
+                <!-- Slide-->
+                <div class="swiper-slide position-relative h-100 w-100">
+                  <div class="w-100 h-100 overflow-hidden position-absolute z-index-1 top-0 start-0 end-0 bottom-0">
+                    <div class="w-100 h-100 bg-img-cover bg-pos-center-center overflow-hidden" data-swiper-parallax="-100"
+                      style=" will-change: transform; background-image: url(./assets/images/banners/adidas.jpg)">
+                    </div>
+                  </div>
+                  <div
+                    class="container position-relative z-index-10 d-flex h-100 align-items-start flex-column justify-content-center">
+                    <p class="title-small text-white opacity-75 mb-0" data-swiper-parallax="-100">Spring Collection</p>
+                    <h2 class="display-3 tracking-wide fw-bold text-uppercase tracking-wide text-white" data-swiper-parallax="100">
+                      Adidas <span class="text-outline-light"></span></h2>
+                    <div data-swiper-parallax-y="-25">
+                      <a href="./category.html" class="btn btn-psuedo text-white" role="button">Shop Latest Adidas</a>
+                    </div>
+                  </div>
+                </div>
+                <!--/Slide-->
+            
+                <!-- Slide-->
+                <div class="swiper-slide position-relative h-100 w-100">
+                  <div class="w-100 h-100 overflow-hidden position-absolute z-index-1 top-0 start-0 end-0 bottom-0">
+                    <div class="w-100 h-100 bg-img-cover bg-pos-center-center overflow-hidden" data-swiper-parallax="-100"
+                      style=" will-change: transform; background-image: url(./assets/images/banners/nikee.jpg)">
+                    </div>
+                  </div>
+                  <div
+                    class="container position-relative z-index-10 d-flex h-100 align-items-start flex-column justify-content-center">
+                    <p class="title-small text-white opacity-75 mb-0" data-swiper-parallax="-100">Just Do it</p>
+                    <h2 class="display-3 tracking-wide fw-bold text-uppercase tracking-wide text-white" data-swiper-parallax="100">
+                      Nike <span class="text-outline-light"></span></h2>
+                    <div data-swiper-parallax-y="-25">
+                      <a href="./category.html" class="btn btn-psuedo text-white" role="button">Shop Latest Nike</a>
+                    </div>
+                  </div>
+                </div>
+                <!-- /Slide-->
+            
+                <!--Slide-->
+                <div class="swiper-slide position-relative h-100 w-100">
+                  <div class="w-100 h-100 overflow-hidden position-absolute z-index-1 top-0 start-0 end-0 bottom-0">
+                    <div class="w-100 h-100 bg-img-cover bg-pos-center-center overflow-hidden" data-swiper-parallax="-100"
+                      style=" will-change: transform; background-image: url(./assets/images/banners/arg.jpg)">
+                    </div>
+                  </div>
+                  <div
+                    class="container position-relative z-index-10 d-flex h-100 align-items-start flex-column justify-content-center">
+                    <p class="title-small text-white opacity-75 mb-0" data-swiper-parallax="-100">Look Good Feel Good</p>
+                    <h2 class="display-3 tracking-wide fw-bold text-uppercase tracking-wide text-white" data-swiper-parallax="100">
+                      <span class="text-outline-light">Sustainable</span> Fashion</h2>
+                    <div data-swiper-parallax-y="-25">
+                      <a href="./category.html" class="btn btn-psuedo text-white" role="button">Why We Are Different</a>
+                    </div>
+                  </div>
+                </div>
+                <!--/Slide-->
+            
+              </div>
+            
+              <div class="swiper-pagination swiper-pagination-bullet-light"></div>
+            
+            </div>
+            <!-- / Swiper Info-->        </section>
+        <!--/ Top Banner-->
+
+        <!-- Featured Brands-->
+        <div class="brand-section container-fluid" data-aos="fade-in">
+            <div class="bg-overlay-sides-white-to-transparent bg-white py-5 py-md-7">
+                <section class="marquee marquee-hover-pause">
+                    <div class="marquee-body">
+                        <div class="marquee-section animation-marquee-50">
+                            <div class="mx-3 mx-lg-5 f-w-24">
+                                <a class="d-block" href="./category.html">
+                                    <picture>
+                                        <img class="img-fluid d-table mx-auto" src="./assets/images/logos/nike.svg" alt="">
+                                    </picture>
+                                </a>
+                            </div>
+                            <div class="mx-3 mx-lg-5 f-w-24">
+                                <a class="d-block" href="./category.html">
+                                    <picture>
+                                        <img class="img-fluid d-table mx-auto" src="./assets/images/logos/adidas.svg" alt="">
+                                    </picture>
+                                </a>
+                            </div>
+                            <div class="mx-3 mx-lg-5 f-w-24">
+                                <a class="d-block" href="./category.html">
+                                    <picture>
+                                        <img class="img-fluid d-table mx-auto" src="./assets/images/logos/puma.svg" alt="">
+                                    </picture>
+                                </a>
+                            </div>
+                            <div class="mx-3 mx-lg-5 f-w-24">
+                                <a class="d-block" href="./category.html">
+                                    <picture>
+                                        <img class="img-fluid d-table mx-auto" src="./assets/images/logos/umbro.svg" alt="">
+                                    </picture>
+                                </a>
+                            </div>
+                            <div class="mx-3 mx-lg-5 f-w-24">
+                                <a class="d-block" href="./category.html">
+                                    <picture>
+                                        <img class="img-fluid d-table mx-auto" src="./assets/images/logos/kappa.svg" alt="">
+                                    </picture>
+                                </a>
+                            </div>
+                            <div class="mx-3 mx-lg-5 f-w-24">
+                                <a class="d-block" href="./category.html">
+                                    <picture>
+                                        <img class="img-fluid d-table mx-auto" src="./assets/images/logos/nb.svg" alt="">
+                                    </picture>
+                                </a>
+                            </div>
+                            <div class="mx-3 mx-lg-5 f-w-24">
+                                <a class="d-block" href="./category.html">
+                                    <picture>
+                                        <img class="img-fluid d-table mx-auto" src="./assets/images/logos/mizuno.svg" alt="">
+                                    </picture>
+                                </a>
+                            </div>
+                            <div class="mx-3 mx-lg-5 f-w-24">
+                                <a class="d-block" href="./category.html">
+                                    <picture>
+                                        <img class="img-fluid d-table mx-auto" src="./assets/images/logos/Joma.svg" alt="">
+                                    </picture>
+                                </a>
+                            </div>
+                            <div class="mx-3 mx-lg-5 f-w-24">
+                                <a class="d-block" href="./category.html">
+                                    <picture>
+                                        <img class="img-fluid d-table mx-auto" src="./assets/images/logos/macron.svg" alt="">
+                                    </picture>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="marquee-section animation-marquee-50">
+                            <div class="mx-5 f-w-24">
+                                <a class="d-block" href="./category.html">
+                                    <picture>
+                                        <img class="img-fluid d-table mx-auto" src="./assets/images/logos/nike.svg" alt="">
+                                    </picture>
+                                </a>
+                            </div>
+                            <div class="mx-5 f-w-24">
+                                <a class="d-block" href="./category.html">
+                                    <picture>
+                                        <img class="img-fluid d-table mx-auto" src="./assets/images/logos/adidas.svg" alt="">
+                                    </picture>
+                                </a>
+                            </div>
+                            <div class="mx-5 f-w-24">
+                                <a class="d-block" href="./category.html">
+                                    <picture>
+                                        <img class="img-fluid d-table mx-auto" src="./assets/images/logos/puma.svg" alt="">
+                                    </picture>
+                                </a>
+                            </div>
+                            <div class="mx-5 f-w-24">
+                                <a class="d-block" href="./category.html">
+                                    <picture>
+                                        <img class="img-fluid d-table mx-auto" src="./assets/images/logos/umbro.svg" alt="">
+                                    </picture>
+                                </a>
+                            </div>
+                            <div class="mx-5 f-w-24">
+                                <a class="d-block" href="./category.html">
+                                    <picture>
+                                        <img class="img-fluid d-table mx-auto" src="./assets/images/logos/kappa.svg" alt="">
+                                    </picture>
+                                </a>
+                            </div>
+                            <div class="mx-5 f-w-24">
+                                <a class="d-block" href="./category.html">
+                                    <picture>
+                                        <img class="img-fluid d-table mx-auto" src="./assets/images/logos/nb.svg" alt="">
+                                    </picture>
+                                </a>
+                            </div>
+                            <div class="mx-5 f-w-24">
+                                <a class="d-block" href="./category.html">
+                                    <picture>
+                                        <img class="img-fluid d-table mx-auto" src="./assets/images/logos/mizuno.svg" alt="">
+                                    </picture>
+                                </a>
+                            </div>
+                            <div class="mx-5 f-w-24">
+                                <a class="d-block" href="./category.html">
+                                    <picture>
+                                        <img class="img-fluid d-table mx-auto" src="./assets/images/logos/Joma.svg" alt="">
+                                    </picture>
+                                </a>
+                            </div>
+                            <div class="mx-5 f-w-24">
+                                <a class="d-block" href="./category.html">
+                                    <picture>
+                                        <img class="img-fluid d-table mx-auto" src="./assets/images/logos/macron.svg" alt="">
+                                    </picture>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <!--/ Featured Brands-->
+
+        <div class="container-fluid">
+
+            <!-- Featured Categories-->
+            <div class="m-0">
+                    <!-- Swiper Latest -->
+                    <div class="swiper-container overflow-hidden overflow-lg-visible"
+                      data-swiper
+                      data-options='{
+                        "spaceBetween": 25,
+                        "slidesPerView": 1,
+                        "observer": true,
+                        "observeParents": true,
+                        "breakpoints": {     
+                          "540": {
+                            "slidesPerView": 1,
+                            "spaceBetween": 0
+                          },
+                          "770": {
+                            "slidesPerView": 2
+                          },
+                          "1024": {
+                            "slidesPerView": 3
+                          },
+                          "1200": {
+                            "slidesPerView": 4
+                          },
+                          "1500": {
+                            "slidesPerView": 5
+                          }
+                        },   
+                        "navigation": {
+                          "nextEl": ".swiper-next",
+                          "prevEl": ".swiper-prev"
+                        }
+                      }'>
+                      <div class="swiper-wrapper">
+                          <div class="swiper-slide align-self-stretch bg-transparent h-auto">
+                            <div class="me-xl-n4 me-xxl-n5" data-aos="fade-up" data-aos-delay="000">
+                                <picture class="d-block mb-4 img-clip-shape-one">
+                                    <img class="w-100" title="" src="./assets/images/categories/q1.jpg" alt="HTML Bootstrap Template by Pixel Rocket">
+                                </picture>
+                                <p class="title-small mb-2 text-muted">Retro Collection</p>
+                                <h4 class="lead fw-bold">Premier League</h4>
+                                <a href="./category.html" class="btn btn-psuedo align-self-start">Shop Now</a>
+                            </div>
+                          </div>
+                          <div class="swiper-slide align-self-stretch bg-transparent h-auto">
+                            <div class="me-xl-n4 me-xxl-n5" data-aos="fade-up" data-aos-delay="100">
+                                <picture class="d-block mb-4 img-clip-shape-one">
+                                    <img class="w-100" title="" src="./assets/images/categories/Barcelona 2001.jpg" alt="HTML Bootstrap Template by Pixel Rocket">
+                                </picture>
+                                <p class="title-small mb-2 text-muted">Retro Collection</p>
+                                <h4 class="lead fw-bold">LaLiga</h4>
+                                <a href="./category.html" class="btn btn-psuedo align-self-start">Shop Now</a>
+                            </div>
+                          </div>
+                          <div class="swiper-slide align-self-stretch bg-transparent h-auto">
+                            <div class="me-xl-n4 me-xxl-n5" data-aos="fade-up" data-aos-delay="200">
+                                <picture class="d-block mb-4 img-clip-shape-one">
+                                    <img class="w-100" title="" src="./assets/images/categories/bm.jpg" alt="HTML Bootstrap Template by Pixel Rocket">
+                                </picture>
+                                <p class="title-small mb-2 text-muted">Retro Collection</p>
+                                <h4 class="lead fw-bold">Bundesliga</h4>
+                                <a href="./category.html" class="btn btn-psuedo align-self-start">Shop Now</a>
+                            </div>
+                          </div>
+                          <div class="swiper-slide align-self-stretch bg-transparent h-auto">
+                            <div class="me-xl-n4 me-xxl-n5" data-aos="fade-up" data-aos-delay="300">
+                                <picture class="d-block mb-4 img-clip-shape-one">
+                                    <img class="w-100" title="" src="./assets/images/categories/q4.jpg" alt="HTML Bootstrap Template by Pixel Rocket">
+                                </picture>
+                                <p class="title-small mb-2 text-muted">Retro Collection</p>
+                                <h4 class="lead fw-bold">Ligue1</h4>
+                                <a href="./category.html" class="btn btn-psuedo align-self-start">Shop Now</a>
+                            </div>
+                          </div>
+                          <div class="swiper-slide align-self-stretch bg-transparent h-auto">
+                            <div class="me-xl-n4 me-xxl-n5" data-aos="fade-up" data-aos-delay="400">
+                                <picture class="d-block mb-4 img-clip-shape-one">
+                                    <img class="w-100" title="" src="./assets/images/categories/q5.jpg" alt="HTML Bootstrap Template by Pixel Rocket">
+                                </picture>
+                                <p class="title-small mb-2 text-muted">Retro Collection</p>
+                                <h4 class="lead fw-bold">Seria A</h4>
+                                <a href="./category.html" class="btn btn-psuedo align-self-start">Shop Now</a>
+                            </div>
+                          </div>
+                          <div class="swiper-slide align-self-stretch bg-transparent h-auto">
+                            <div class="me-xl-n4 me-xxl-n5" data-aos="fade-up" data-aos-delay="500">
+                                <picture class="d-block mb-4 img-clip-shape-one">
+                                    <img class="w-100" title="" src="./assets/images/categories/q6.jpg" alt="HTML Bootstrap Template by Pixel Rocket">
+                                </picture>
+                                <p class="title-small mb-2 text-muted">20% Off</p>
+                                <h4 class="lead fw-bold">Other League</h4>
+                                <a href="./category.html" class="btn btn-psuedo align-self-start">Shop Now</a>
+                            </div>
+                          </div>
+                      </div>
+                    
+                      <div class="swiper-btn swiper-prev swiper-disabled-hide swiper-btn-side btn-icon bg-white text-dark ms-3 shadow mt-n5"><i class="ri-arrow-left-s-line "></i></div>
+                      <div class="swiper-btn swiper-next swiper-disabled-hide swiper-btn-side swiper-btn-side-right btn-icon bg-white text-dark me-3 shadow mt-n5"><i class="ri-arrow-right-s-line ri-lg"></i></div>
+                    
+                    </div>
+                    <!-- / Swiper Latest-->                <!-- SVG Used for Clipath on featured images above-->
+                <svg width="0" height="0">
+                  <defs>
+                  <clipPath id="svg-slanted-one" clipPathUnits="objectBoundingBox">
+                      <path d="M0.822,1 H0.016 a0.015,0.015,0,0,1,-0.016,-0.015 L0.158,0.015 A0.016,0.015,0,0,1,0.173,0 L0.984,0 a0.016,0.015,0,0,1,0.016,0.015 L0.837,0.985 A0.016,0.015,0,0,1,0.822,1"></path>
+                  </clipPath>
+                  </defs>
+                </svg>            </div>
+            <!-- /Featured Categories-->
+
+            <!-- Homepage Intro-->
+            <div class="position-relative row my-lg-7 pt-5 pt-lg-0 g-8">
+                <div class="bg-text bottom-0 start-0 end-0" data-aos="fade-up">
+                    <h2 class="bg-text-title opacity-30"><span class="text-outline-dark">Jersey</span>Vintages</h2>
+                </div>
+                <div class="col-12 col-md-6 position-relative z-index-20 mb-7 mb-lg-0" data-aos="fade-right">
+                    <p class="text-muted title-small">Welcome</p>
+                    <h3 class="display-3 fw-bold mb-5"><span class="text-outline-dark">Dinoestadio</span> - football shirt</h3>
+                    <p class="lead">We are Dinoestadio, a specialty store for classic and vintage football shirts from clubs and national teams around the world. Our collection features rare editions, retro designs, and iconic jerseys full of history.</p>
+                    <p class="lead">We ship worldwide and offer competitive prices - it's the perfect time to find your next favorite piece of football nostalgia.</p>
+                    <a href="./category.html" class="btn btn-psuedo" role="button">Shop New Arrivals</a>
+                </div>
+                <div class="col-12 col-md-6 position-relative z-index-20 pe-0" data-aos="fade-left">
+                    <picture class="w-50 d-block position-relative z-index-10 border border-white border-4 shadow-lg">
+                        <img class="img-fluid" src="./assets/images/banners/ms.jpg" alt="HTML Bootstrap Template by Pixel Rocket">
+                    </picture>
+                    <picture class="w-60 d-block me-8 mt-n10 shadow-lg border border-white border-4 position-relative z-index-20 ms-auto">
+                        <img class="img-fluid" src="./assets/images/banners/all.jpg" alt="HTML Bootstrap Template by Pixel Rocket">
+                    </picture>
+                    <picture class="w-50 d-block me-8 mt-n7 shadow-lg border border-white border-4 position-absolute top-0 end-0 z-index-0 ">
+                        <img class="img-fluid" src="./assets/images/banners/download (3).jpg" alt="HTML Bootstrap Template by Pixel Rocket">
+                    </picture>
+                </div>
+            </div>
+            
+            <!-- Instagram-->
+            <!-- Swiper Instagram -->
+            <div data-aos="fade-in">
+              <h3 class="title-small text-muted text-center mb-3 mt-5"><i class="ri-instagram-line align-bottom"></i>
+                DINOESTADIOSFS
+            </h3>
+            <div class="overflow-hidden">
+              <div class="swiper-container swiper-overflow-visible"
+                data-swiper
+                data-options='{
+                    "spaceBetween": 10,
+                    "loop": true,
+                    "autoplay": {
+                      "delay": 1000,
+                      "disableOnInteraction": false
+                    },
+                    "breakpoints": {
+                      "400": {
+                        "slidesPerView": 2
+                      },
+                      "600": {
+                        "slidesPerView": 3
+                      },       
+                      "999": {
+                        "slidesPerView": 5
+                      },
+                      "1024": {
+                        "slidesPerView": 6
+                      }
+                    }
+                  }'>
+                <div class="swiper-wrapper mb-5">
+            
+                  <!-- Start of instagram slideshow loop for items-->
+                  <div class="swiper-slide flex-column">
+                    <picture>
+                      <img
+                        class="rounded shadow-sm img-fluid"
+                        data-zoomable
+                        src="./assets/images/banners/k.jpg"
+                        title=""
+                        alt="">
+                    </picture>
+                  </div>
+                  <div class="swiper-slide flex-column">
+                    <picture>
+                      <img
+                        class="rounded shadow-sm img-fluid"
+                        data-zoomable
+                        src="./assets/images/banners/4.jpg"
+                        title=""
+                        alt="">
+                    </picture>
+                  </div>
+                  <div class="swiper-slide flex-column">
+                    <picture>
+                      <img
+                        class="rounded shadow-sm img-fluid"
+                        data-zoomable
+                        src="./assets/images/banners/q.jpg"
+                        title=""
+                        alt="">
+                    </picture>
+                  </div>
+                  <div class="swiper-slide flex-column">
+                    <picture>
+                      <img
+                        class="rounded shadow-sm img-fluid"
+                        data-zoomable
+                        src="./assets/images/banners/l.jpg"
+                        title=""
+                        alt="">
+                    </picture>
+                  </div>
+
+                  <div class="swiper-slide flex-column">
+                    <picture>
+                      <img
+                        class="rounded shadow-sm img-fluid"
+                        data-zoomable
+                        src="./assets/images/banners/k.jpg"
+                        title=""
+                        alt="">
+                    </picture>
+                  </div>
+                  <div class="swiper-slide flex-column">
+                    <picture>
+                      <img
+                        class="rounded shadow-sm img-fluid"
+                        data-zoomable
+                        src="./assets/images/banners/4.jpg"
+                        title=""
+                        alt="">
+                    </picture>
+                  </div>
+                  <div class="swiper-slide flex-column">
+                    <picture>
+                      <img
+                        class="rounded shadow-sm img-fluid"
+                        data-zoomable
+                        src="./assets/images/banners/q.jpg"
+                        title=""
+                        alt="">
+                    </picture>
+                  </div>
+                  <div class="swiper-slide flex-column">
+                    <picture>
+                      <img
+                        class="rounded shadow-sm img-fluid"
+                        data-zoomable
+                        src="./assets/images/banners/l.jpg"
+                        title=""
+                        alt="">
+                    </picture>
+                  </div>
+                  
+                  <!-- / end of items loop-->
+            
+                </div>
+              </div>
+            </div>
+            </div>
+            <!-- /Swiper Instagram-->
+            <!-- / Instagram-->
+
+        </div>
+
+        <!-- /Page Content -->
+    </section>
+    <!-- / Main Section-->
+
+        <!-- Blog Section -->
+        <!-- Tambahkan link AOS CSS dan JS di dalam <head> halaman HTML kamu -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+        <!-- Blog Section -->
+        <section id="blog" style="background-color: #1b1b1b; padding: 4rem 0;">
+        <div class="container">
+            <h2 style="font-size: 2.2rem; font-weight: 700; color: #ffffff; text-align: center; margin-bottom: 0.5rem;" data-aos="fade-down">
+            Latest News
+            </h2>
+            <p style="font-size: 1rem; color: #ffffff; text-align: center; margin-bottom: 2.5rem;" data-aos="fade-down" data-aos-delay="100">
+            Get the latest news from dinoestadiofs
+            </p>
+
+            <div class="row justify-content-center">
+            <!-- Card 1 -->
+            <div class="col-md-5 col-sm-10 mb-4" data-aos="fade-up">
+                <div style="background: #ffffff; border-radius: 6px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); overflow: hidden; transition: 0.3s;">
+                <img src="./assets/images/banners/vds.jpg" alt="Berita 1" style="width: 100%; height: auto;">
+                <div style="padding: 1rem;">
+                    <h6 style="font-size: 1.05rem; font-weight: 600; color: #333;">
+                    JerseyBangJKT Vol.1: Football & Culture Exhibition
+                    </h6>
+                    <p style="font-size: 0.95rem; color: #555;">
+                    Dinoestadio is present at JerseyBangJKT Vol.1 to celebrate football culture through a collection of vintage football shirts. This event serves as a platform for jersey and lifestyle enthusiasts from various communities.
+                    </p>
+                    <a href="https://www.instagram.com/p/DJBGtxTvPkG/?img_index=1" style="color: #333; text-decoration: none; font-weight: 600;">Go To The Article</a>
+                </div>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="col-md-5 col-sm-10 mb-4" data-aos="fade-up" data-aos-delay="150">
+                <div style="background: #ffffff; border-radius: 6px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); overflow: hidden; transition: 0.3s;">
+                <img src="./assets/images/banners/r10.jpg" alt="Berita 2" style="width: 100%; height: auto;">
+                <div style="padding: 1rem;">
+                    <h6 style="font-size: 1.05rem; font-weight: 600; color: #333;">
+                    JerseyBangJKT Vol.1: Football & Culture Exhibition
+                    </h6>
+                    <p style="font-size: 0.95rem; color: #555;">
+                    Dinoestadio is present at JerseyBangJKT Vol.1 to celebrate football culture through a collection of vintage football shirts. This event serves as a platform for jersey and lifestyle enthusiasts from various communities.
+                    </p>
+                    <a href="https://www.instagram.com/p/DJBGtxTvPkG/?img_index=1" style="color: #333; text-decoration: none; font-weight: 600;">Go To The Article</a>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        </section>
+
+        <!-- Inisialisasi AOS -->
+        <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+        </script>
+
+        <!-- Destination Section -->
+    <section style="background-color: #ffffff; padding: 4rem 1rem;">
+    <div class="container text-center" data-aos="fade-up">
+        <h2 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 1.5rem;">
+        Your Trusted Source for Classic Football Culture & Vintage Kits
+        </h2>
+        <p style="max-width: 900px; margin: 0 auto; font-size: 1.05rem; line-height: 1.8; color: #333;">
+        Welcome to <strong>Dinoestadio</strong> — where timeless football heritage meets authentic vintage style.
+        Whether you're searching for a legendary 90s Serie A shirt, a rare international jersey, or a match-worn
+        piece of football history, you'll find it here.
+        Our collection is curated with passion by fans, for fans. Every shirt is 100% genuine and authenticated — 
+        because we believe every piece has a story to tell. From iconic World Cup classics to retro club kits, 
+        each drop brings the game’s history back to life. <br><br>
+        At Dinoestadio, we don’t just sell shirts — we keep football’s legacy alive. So sit back, explore, 
+        and relive your favorite football eras, one shirt at a time.
+        </p>
+    </div>
+    </section>
+
+
+
+        <!-- Why Choose Section -->
+    <section class="py-5" style="background-color: #ffffff;">
+    <div class="container">
+        <h2 class="text-center mb-5 fw-bold" data-aos="fade-up">Why choose Dinoestadio?</h2>
+    <div class="row g-4">
+      
+      <!-- Left Column -->
+      <div class="col-md-6" data-aos="fade-up">
+        <div class="accordion" id="leftAccordion">
+          
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="heading1">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false">
+                We only sell 100% authentic football shirts
+              </button>
+            </h2>
+            <div id="collapse1" class="accordion-collapse collapse" data-bs-parent="#leftAccordion">
+              <div class="accordion-body">
+                Every shirt is <strong>checked</strong> and <strong>authenticated</strong> before listing. We sell only <strong>original</strong> and <strong>officially licensed</strong> shirts.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="heading2">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false">
+                Fast global shipping options
+              </button>
+            </h2>
+            <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#leftAccordion">
+              <div class="accordion-body">
+                We ship worldwide with secure and tracked delivery services.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="heading3">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false">
+                Need the measurements before you buy?
+              </button>
+            </h2>
+            <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#leftAccordion">
+              <div class="accordion-body">
+                Ask us and we’ll provide the exact size details of the shirt.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Right Column -->
+        <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="accordion" id="rightAccordion">
+            
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="heading4">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false">
+                    We're rated EXCELLENT — read the reviews
+                </button>
+                </h2>
+                <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#rightAccordion">
+                <div class="accordion-body">
+                    Thousands of happy customers have rated us 5 stars!
+                </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="heading5">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false">
+                    Got a question about a football shirt? Ask us...
+                </button>
+                </h2>
+                <div id="collapse5" class="accordion-collapse collapse" data-bs-parent="#rightAccordion">
+                <div class="accordion-body">
+                    We’re happy to help with sizing, condition, and history!
+                </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="heading6">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6" aria-expanded="false">
+                    Yes, we also buy them! Sell to us...
+                </button>
+                </h2>
+                <div id="collapse6" class="accordion-collapse collapse" data-bs-parent="#rightAccordion">
+                <div class="accordion-body">
+                    Got vintage shirts to sell? Contact us for a fair deal.
+                </div>
+                </div>
+            </div>
+
+            </div>
+        </div>
+
+        </div>
+    </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-top py-5 mt-4 bg-white">
+    <div class="container">
+        <div class="d-flex flex-column align-items-center text-center">
+
+        <!-- Teks Copyright -->
+        <p class="small mb-3">
+            &copy; 2025 Vintage Football Shirts —
+            <a href="https://www.instagram.com/dinoestadiofs/" class="text-decoration-none text-dark">Dinoestadiofs</a>
+        </p>
+
+        <!-- Payment Icons -->
+        <!-- <ul class="list-unstyled d-flex justify-content-center align-items-center mb-0">
+            <li class="bg-light p-2 d-flex align-items-center justify-content-center me-2">
+            <i class="pi pi-sm pi-paypal"></i>
+            </li>
+            <li class="bg-light p-2 d-flex align-items-center justify-content-center me-2">
+            <i class="pi pi-sm pi-mastercard"></i>
+            </li>
+            <li class="bg-light p-2 d-flex align-items-center justify-content-center me-2">
+            <i class="pi pi-sm pi-american-express"></i>
+            </li>
+            <li class="bg-light p-2 d-flex align-items-center justify-content-center">
+            <i class="pi pi-sm pi-visa"></i>
+            </li>
+        </ul> -->
+
+        </div>
+    </div>
+    </footer>
+    <!-- / Footer-->
+
+    <!-- Theme JS -->
+    <!-- Vendor JS -->
+    <script src="./assets/js/vendor.bundle.js"></script>
+    
+    <!-- Theme JS -->
+    <script src="./assets/js/theme.bundle.js"></script>
+</body>
+
+</html>

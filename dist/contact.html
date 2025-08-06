@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact Us | Dinoestadiofs</title>
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/favicon/logo_black_only.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon/logo_black_only.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon/logo_black_only.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="./assets/css/libs.bundle.css">
+  <link rel="stylesheet" href="./assets/css/theme.bundle.css">
+
+  <style>
+    .form-contact input,
+    .form-contact textarea {
+      border: none;
+      border-bottom: 1px solid #333;
+      border-radius: 0;
+      padding: 0.5rem 0;
+      font-size: 1rem;
+      background: transparent;
+      width: 100%;
+      margin-bottom: 1.5rem;
+    }
+
+    .form-contact label {
+      font-size: 0.95rem;
+      margin-bottom: 0.3rem;
+      display: block;
+    }
+
+    .form-contact .form-check {
+      margin-bottom: 1.5rem;
+    }
+
+    .btn-pill {
+      border-radius: 9999px;
+      padding: 0.6rem 2rem;
+      background-color: #000;
+      color: #fff;
+      border: none;
+    }
+
+    .btn-pill:hover {
+      background-color: #222;
+    }
+
+    .contact-description p {
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+    }
+
+    .contact-description strong {
+      font-weight: 600;
+    }
+
+    /* Navbar Style */
+    .navbar {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      background-color: #fff;
+    }
+
+    .navbar-nav .nav-link {
+      font-size: 0.85rem;
+      letter-spacing: 0.05em;
+      font-weight: 500;
+      color: #444;
+      text-transform: uppercase;
+      margin: 0 0.8rem;
+    }
+
+    .navbar-nav .nav-link.active {
+      font-weight: 700;
+      color: #000;
+    }
+
+    @media (max-width: 992px) {
+      .navbar-nav .nav-link {
+        margin: 0.5rem 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container d-flex align-items-center">
+      <!-- Logo (persis dari index.html) -->
+      <a class="navbar-brand fw-bold fs-3 m-0 p-0 flex-shrink-0 order-0" href="./index.html">
+        <div class="d-flex align-items-center">
+          <img src="./assets/images/favicon/logo_black_only.png" alt="Logo" class="img-fluid" style="height: 120px;">
+        </div>
+      </a>
+
+      <!-- Toggler for mobile -->
+      <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Menu -->
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="#">Search</a></li>
+          <li class="nav-item"><a class="nav-link" href="./newarrival.html">New Arrivals</a></li>
+          <li class="nav-item"><a class="nav-link" href="./clubs.html">Clubs</a></li>
+          <li class="nav-item"><a class="nav-link" href="./International.html">National Team</a></li>
+          <li class="nav-item"><a class="nav-link" href="./merchandies.html">Merchandise</a></li>
+          <li class="nav-item"><a class="nav-link active" href="./contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Contact Content -->
+  <section class="py-6">
+    <div class="container" style="max-width: 720px;">
+      <h1 class="fw-bold mb-4">Contact Us</h1>
+
+      <div class="contact-description mb-5">
+        <p><strong>Got a question about a football shirt or other items on the Dinoestadio store? Or perhaps you've got a question about your most recent order with us?</strong></p>
+        <p>No problem, just drop us a line via the contact form below or use our live chat feature and we’ll get back to you ASAP.</p>
+        <p>Want to sell your shirt to us? Please send these to our dedicated email <strong>dinoestadiofootballshirts@gmail.com</strong>.</p>
+        <p>From Monday to Friday, we endeavour to respond to all messages before the end of the next working day. For messages received on a Friday and across the weekend, we aim to respond by the end of the next working day, unless that day is a public holiday. However, at busier times this may take a little longer.</p>
+        <p>Our Live Chat team operate on Monday to Friday between 9am to 5pm GMT+7. If you message outside of these hours we shall endeavour to reply to you as soon as possible via email.</p>
+      </div>
+
+      <form class="form-contact">
+        <div class="mb-3">
+          <label for="fullname">Full Name</label>
+          <input type="text" id="fullname" name="fullname" required>
+        </div>
+        <div class="mb-3">
+          <label for="email">Email*</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="mb-3">
+          <label for="message">Message*</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+        <div class="form-check mb-4">
+          <input class="form-check-input" type="checkbox" value="" id="urgent">
+          <label class="form-check-label" for="urgent">
+            This is urgent
+          </label>
+        </div>
+        <button type="submit" class="btn-pill">Send</button>
+        <p class="text-muted small mt-3">Fields marked with an asterisk (*) are required.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-top py-5 bg-white mt-5">
+    <div class="container text-center">
+      <p class="small mb-0">
+        &copy; 2025 Dinoestadiofs — <a href="https://www.instagram.com/dinoestadiofs/" class="text-dark">Instagram</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="./assets/js/vendor.bundle.js"></script>
+  <script src="./assets/js/theme.bundle.js"></script>
+</body>
+
+</html>

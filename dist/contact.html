@@ -92,34 +92,66 @@
 <body>
 
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light">
-    <div class="container d-flex align-items-center">
-      <!-- Logo (persis dari index.html) -->
-      <a class="navbar-brand fw-bold fs-3 m-0 p-0 flex-shrink-0 order-0" href="./index.html">
-        <div class="d-flex align-items-center">
-          <img src="./assets/images/favicon/logo_black_only.png" alt="Logo" class="img-fluid" style="height: 120px;">
+  <nav class="navbar navbar-expand-lg navbar-light bg-white flex-column border-0">
+    <div class="container-fluid">
+      <div class="w-100">
+        <div class="d-flex justify-content-between align-items-center flex-wrap">
+          
+          <!-- Logo -->
+          <a class="navbar-brand fw-bold fs-3 m-0 p-0 flex-shrink-0 order-0" href="./index.html">
+            <div class="d-flex align-items-center">
+              <img src="./assets/images/favicon/logo_black_only.png" alt="Logo" class="img-fluid" style="height: 120px;">
+            </div>
+          </a>
+          <!-- / Logo -->
+
+          <!-- Navbar Icons -->
+          <ul class="list-unstyled mb-0 d-flex align-items-center order-1 order-lg-2 nav-sidelinks">
+
+            <!-- Mobile Nav Toggler -->
+            <li class="d-lg-none">
+              <span class="nav-link text-body d-flex align-items-center cursor-pointer" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="ri-menu-line ri-lg me-1"></i> Menu
+              </span>
+            </li>
+            <!-- /Mobile Nav Toggler -->
+
+            <!-- Navbar Search -->
+            <li class="d-none d-sm-block">
+              <span class="nav-link text-body search-trigger cursor-pointer">Search</span>
+              <div class="navbar-search d-none">
+                <div class="input-group mb-3 h-100">
+                  <span class="input-group-text px-4 bg-transparent border-0">
+                    <i class="ri-search-line ri-lg"></i>
+                  </span>
+                  <input type="text" class="form-control text-body bg-transparent border-0" placeholder="Enter your search terms...">
+                  <span class="input-group-text px-4 cursor-pointer disable-child-pointer close-search bg-transparent border-0">
+                    <i class="ri-close-circle-line ri-lg"></i>
+                  </span>
+                </div>
+              </div>
+              <div class="search-overlay"></div>
+            </li>
+            <!-- /Navbar Search -->
+          </ul>
+
+          <!-- Main Navigation -->
+          <div class="flex-shrink-0 collapse navbar-collapse navbar-collapse-light w-auto flex-grow-1 order-2 order-lg-1" id="navbarNavDropdown">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+              <li class="nav-item"><a class="nav-link" href="./newarrival.html">New Arrivals</a></li>
+              <li class="nav-item"><a class="nav-link" href="./clubs.html">Clubs</a></li>
+              <li class="nav-item"><a class="nav-link" href="./International.html">National Team</a></li>
+              <li class="nav-item"><a class="nav-link" href="./merchandies.html">Merchandise</a></li>
+              <li class="nav-item"><a class="nav-link" href="./contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <!-- / Main Navigation -->
+
         </div>
-      </a>
-
-      <!-- Toggler for mobile -->
-      <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <!-- Menu -->
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link" href="#">Search</a></li>
-          <li class="nav-item"><a class="nav-link" href="./newarrival.html">New Arrivals</a></li>
-          <li class="nav-item"><a class="nav-link" href="./clubs.html">Clubs</a></li>
-          <li class="nav-item"><a class="nav-link" href="./International.html">National Team</a></li>
-          <li class="nav-item"><a class="nav-link" href="./merchandies.html">Merchandise</a></li>
-          <li class="nav-item"><a class="nav-link active" href="./contact.html">Contact</a></li>
-        </ul>
       </div>
     </div>
   </nav>
-
+  <!-- / Navbar -->
   <!-- Main Contact Content -->
   <section class="py-6">
     <div class="container" style="max-width: 720px;">
